@@ -2,7 +2,7 @@ import axios, { AxiosError } from "axios";
 import { ApiMessage, ApiResponse, ApiError } from "@/types";
 
 const apiClient = axios.create({
-  baseURL: "/api/v1/chat/completions",
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     "Content-Type": "application/json",
     Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
