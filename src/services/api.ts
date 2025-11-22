@@ -1,11 +1,18 @@
 import axios, { AxiosError } from "axios";
 import { ApiMessage, ApiResponse, ApiError } from "@/types";
 
+// Use Vercel proxy in production, direct API in development
+const isProduction = import.meta.env.PROD;
+const baseURL = isProduction ? "/api/chat" : import.meta.env.VITE_API_URL;
+
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+  baseURL,
   headers: {
     "Content-Type": "application/json",
-    Authorization: `Bearer ${import.meta.env.VITE_API_KEY}`,
+    // Only send auth header in development (proxy handles it in production)
+    ...(isProduction
+      ? {}
+      : { Authorization: `Bearer ${import.meta.env.VITE_API_KEY}` }),
   },
   timeout: 30000,
 });
