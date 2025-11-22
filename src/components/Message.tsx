@@ -46,7 +46,7 @@ const Message = ({ message }: MessageProps) => {
             } shadow-md`}
             dir="rtl"
           >
-            <p className="text-sm md:text-base leading-relaxed  whitespace-nowrap text-right">
+            <p className="text-sm md:text-base leading-relaxed text-right break-words">
               {message.content}
             </p>
           </div>
