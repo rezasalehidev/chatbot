@@ -18,6 +18,20 @@
 
 مدیریت خطا (شبکه، پاسخ نامعتبر و…)
 
+📸 تصاویر
+
+### حالت روشن (دسکتاپ)
+
+![Desktop Light Mode](screenshots/desktop-light.png)
+
+### حالت تاریک (دسکتاپ)
+
+![Desktop Dark Mode](screenshots/desktop-dark.png)
+
+### نمای موبایل
+
+![Mobile View](screenshots/mobile.png)
+
 🛠 تکنولوژی‌ها
 
 React 18 – TypeScript – Vite – TailwindCSS (RTL) – Axios – Context API
