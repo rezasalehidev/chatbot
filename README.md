@@ -1,54 +1,61 @@
-چت‌بات فارسی – AIAhura Chat Lite
+# Persian Chatbot – AIAhura Chat Lite
 
-یک رابط کاربری ساده، مدرن و واکنش‌گرا برای چت‌بات فارسی با پشتیبانی کامل از RTL، تم تاریک/روشن و قابلیت ارسال/دریافت پیام از API.
+A simple, modern, and responsive user interface for a Persian chatbot with full RTL support, dark/light theme, and the ability to send/receive messages from API.
 
-✨ ویژگی‌ها
+## ✨ Features
 
-رابط کاربری RTL و کاملاً واکنش‌گرا
+- RTL and fully responsive user interface
+- Send and receive messages from API
+- Display message history + auto-scroll
+- "Typing..." indicator
+- Dark/Light theme
+- Save messages in localStorage
+- Error handling (network, invalid response, etc.)
 
-ارسال و دریافت پیام از API
+## 📸 Screenshots
 
-نمایش تاریخچه پیام‌ها + اسکرول خودکار
-
-اندیکاتور «در حال تایپ…»
-
-تم تاریک/روشن
-
-ذخیره پیام‌ها در localStorage
-
-مدیریت خطا (شبکه، پاسخ نامعتبر و…)
-
-📸 تصاویر
-
-### حالت روشن (دسکتاپ)
+### Light Mode (Desktop)
 
 ![Desktop Light Mode](screenshots/desktop-light.png)
 
-### حالت تاریک (دسکتاپ)
+### Dark Mode (Desktop)
 
 ![Desktop Dark Mode](screenshots/desktop-dark.png)
 
-### نمای موبایل
+### Mobile View
 
 ![Mobile View](screenshots/mobile.png)
 
-🛠 تکنولوژی‌ها
+## 🛠 Technologies
 
 React 18 – TypeScript – Vite – TailwindCSS (RTL) – Axios – Context API
 
-🚀 نصب سریع
+## 🚀 Quick Start
+
+```bash
 yarn install
 yarn run dev
+```
 
-🔌 API
-URL: https://chat.aiahura.com/api/v1/chat/completions
-API Key: sk-xxxx...
-Model: mistral-small3.2:24b
+## 🔌 API
 
-فرمت درخواست
-{ "model": "mistral-small3.2:24b", "messages": [{ "role": "user", "content": "سلام" }] }
+**URL:** https://chat.aiahura.com/api/v1/chat/completions  
+**API Key:** sk-xxxx...  
+**Model:** mistral-small3.2:24b
 
-فرمت پاسخ
+### Request Format
 
-پاسخ را از مسیر زیر بخوانید:
+```json
+{
+  "model": "mistral-small3.2:24b",
+  "messages": [{ "role": "user", "content": "سلام" }]
+}
+```
+
+### Response Format
+
+Read the response from the following path:
+
+```
 choices[0].message.content
+```
